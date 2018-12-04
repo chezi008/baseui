@@ -22,21 +22,21 @@ abstract class BaseFragment : Fragment(), IBaseView, IBaseUI {
     /**
      * 是否已经加载视图
      */
-    protected var isViewPrepared = false
+    private var isViewPrepared = false
     /**
      * 是否已经加载数据
      */
-    protected var isDataLoaded: Boolean = false
+    private var isDataLoaded: Boolean = false
 
     open var mLoadingDialog: LoadingDialog? = null
     /**
      * hanlder
      */
-    protected var mHandler = Handler(Looper.getMainLooper())
+    private var mHandler = Handler(Looper.getMainLooper())
     /**
      * 主线程id
      */
-    var UiThreadId = Thread.currentThread().id
+    private var UiThreadId = Thread.currentThread().id
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
