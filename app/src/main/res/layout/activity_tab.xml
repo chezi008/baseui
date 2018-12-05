@@ -18,6 +18,7 @@
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:textColor="@color/color_tab_text"
             app:layout_constraintBottom_toTopOf="@+id/cameraTabLayout"></com.chezi008.baseui.view.NormalTabLayout>
     <com.chezi008.baseui.view.CameraTabLayout
             android:id="@+id/cameraTabLayout"
