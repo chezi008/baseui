@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">BaseUiDemo</string>
+
+    <string name="tab_call">电话</string>
+    <string name="tab_msg">消息</string>
+    <string name="tab_camera">相机</string>
+    <string name="tab_map">地图</string>
+    <string name="tab_me">我的</string>
+
 </resources>
