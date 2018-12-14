@@ -8,3 +8,6 @@ android base ui library
 - 添加utils包，增加常用的工具类
 - 添加自定义NormalTabLayout控件
 - 添加CameraTabLayout控件
+
+### 1.0.2
+- 添加TabLayoutView控件（删除NormalTabLayout控件）
