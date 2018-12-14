@@ -3,7 +3,9 @@ package com.chezi008.baseuidemo
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.chezi008.baseui.view.NormalTabLayout
+import com.chezi008.baseui.view.tab.TabLayoutView
+import com.pqtel.gysoldier.ui.adapter.ViewPagerAdapter
+import com.pqtel.gysoldier.ui.fragment.PreviewFragment
 import kotlinx.android.synthetic.main.activity_tab.*
 
 class TabActivity : AppCompatActivity() {
@@ -17,29 +19,34 @@ class TabActivity : AppCompatActivity() {
      * 初始化 tablayout
      */
     private fun initTabLayout() {
-        var items: Array<NormalTabLayout.TabItem> = arrayOf(
-            NormalTabLayout.TabItem(R.string.tab_call, R.drawable.ic_launcher_foreground),
-            NormalTabLayout.TabItem(R.string.tab_msg, R.drawable.ic_launcher_foreground),
-            NormalTabLayout.TabItem(R.string.tab_camera, R.drawable.ic_launcher_foreground),
-            NormalTabLayout.TabItem(R.string.tab_map, R.drawable.ic_launcher_foreground),
-            NormalTabLayout.TabItem(R.string.tab_me, R.drawable.ic_launcher_foreground)
+        var items = arrayListOf(
+            TabLayoutView.TabItem(resources.getString(R.string.tab_call), R.drawable.ic_launcher_foreground),
+            TabLayoutView.TabItem("消息", R.drawable.ic_launcher_foreground),
+            TabLayoutView.TabItem("相机", R.drawable.ic_launcher_foreground),
+            TabLayoutView.TabItem("地图", R.drawable.ic_launcher_foreground),
+            TabLayoutView.TabItem("我的", R.drawable.ic_launcher_foreground)
         )
+        val fragments = arrayListOf(
+            PreviewFragment(), PreviewFragment()
+            , PreviewFragment(), PreviewFragment(), PreviewFragment()
+        )
+        viewPager.adapter = ViewPagerAdapter(supportFragmentManager,fragments)
         tabLayout.apply {
-            addTabItem(items)
-            setViewPager(viewPager)
+            setupViewPager(viewPager)
+            addTabItems(items)
         }
-        var itemCamera: Array<NormalTabLayout.TabItem> = arrayOf(
-            NormalTabLayout.TabItem(R.string.tab_call, R.drawable.ic_launcher_foreground),
-            NormalTabLayout.TabItem(R.string.tab_msg, R.drawable.ic_launcher_foreground),
-            NormalTabLayout.TabItem(0, R.drawable.ic_launcher_foreground),
-            NormalTabLayout.TabItem(R.string.tab_map, R.drawable.ic_launcher_foreground),
-            NormalTabLayout.TabItem(R.string.tab_me, R.drawable.ic_launcher_foreground)
+        var itemCamera = arrayListOf(
+            TabLayoutView.TabItem(resources.getString(R.string.tab_call), R.drawable.ic_tabitem_camera),
+            TabLayoutView.TabItem("消息", R.drawable.ic_tabitem_camera),
+            TabLayoutView.TabItem("", R.drawable.ic_tabitem_camera),
+            TabLayoutView.TabItem("地图", R.drawable.ic_tabitem_camera),
+            TabLayoutView.TabItem("我的", R.drawable.ic_tabitem_camera)
         )
         cameraTabLayout.apply {
             setCameraListener {
                 Toast.makeText(context,"点击了camera",Toast.LENGTH_SHORT).show()
             }
-            addTabItem(itemCamera)
+            addTabItems(itemCamera)
         }
     }
 }

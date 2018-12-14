@@ -12,17 +12,19 @@
             android:id="@+id/viewPager"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:background="@color/colorAccent"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/tabLayout"></android.support.v4.view.ViewPager>
 
-    <com.chezi008.baseui.view.NormalTabLayout
+    <com.chezi008.baseui.view.tab.TabLayoutView
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             app:textColor="@color/color_tab_text"
-            app:layout_constraintBottom_toTopOf="@+id/cameraTabLayout"></com.chezi008.baseui.view.NormalTabLayout>
-    <com.chezi008.baseui.view.CameraTabLayout
+            app:layout_constraintBottom_toTopOf="@+id/cameraTabLayout"></com.chezi008.baseui.view.tab.TabLayoutView>
+    <com.chezi008.baseui.view.tab.CameraTabLayout
             android:id="@+id/cameraTabLayout"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            app:layout_constraintBottom_toBottomOf="parent"></com.chezi008.baseui.view.CameraTabLayout>
+            app:layout_constraintBottom_toBottomOf="parent"></com.chezi008.baseui.view.tab.CameraTabLayout>
 </android.support.constraint.ConstraintLayout>
