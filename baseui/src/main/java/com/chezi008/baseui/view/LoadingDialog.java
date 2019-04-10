@@ -43,6 +43,7 @@ public class LoadingDialog {
         if (progressDialog != null && progressDialog.isShowing()) {
             progressDialog.dismiss();
         }
+        handler.removeCallbacks(cancelRunnable);
     }
 
     public boolean isShowing(){
