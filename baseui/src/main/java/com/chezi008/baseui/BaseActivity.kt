@@ -70,7 +70,12 @@ abstract class BaseActivity : AppCompatActivity(), IBaseView, IBaseUI {
     }
 
     override fun showToast(msg: String) {
-        Toast.makeText(BaseActivity@this,msg,Toast.LENGTH_SHORT).show()
+        if (Thread.currentThread().id == UiThreadId) {
+            Toast.makeText(BaseActivity@this,msg,Toast.LENGTH_SHORT).show()
+            return
+        }
+        mHandler.post { Toast.makeText(BaseActivity@this,msg,Toast.LENGTH_SHORT).show() }
+
     }
 
 }
