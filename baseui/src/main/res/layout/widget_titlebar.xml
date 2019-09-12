@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical">
+
+    <LinearLayout
+            android:id="@+id/ll_tb_left"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+                android:id="@+id/iv_tb_left"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:paddingStart="@dimen/common_padding_16dp"
+                android:paddingTop="@dimen/common_padding_5dp"
+                android:paddingBottom="@dimen/common_padding_5dp" />
+
+        <TextView
+                android:id="@+id/tv_tb_left"
+                style="@style/CommonBlackText.17sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/common_padding_16dp" />
+    </LinearLayout>
+
+    <TextView
+            android:id="@+id/tv_tb_center"
+            style="@style/CommonBlackText.17sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+            android:id="@+id/ll_tb_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+                android:id="@+id/tv_tb_right"
+                style="@style/CommonBlackText.17sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        <ImageView
+                android:id="@+id/iv_tb_right"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:paddingTop="@dimen/common_padding_5dp"
+                android:paddingEnd="@dimen/common_padding_16dp"
+                android:paddingBottom="@dimen/common_padding_5dp" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

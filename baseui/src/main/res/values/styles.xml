@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--黑色字体-->
+    <style name="CommonBlackText">
+        <item name="android:textColor">@color/common_font_black</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="CommonBlackText.14sp">
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">@dimen/common_font_size_14sp</item>
+    </style>
+    <style name="CommonBlackText.17sp">
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textSize">@dimen/common_font_size_17sp</item>
+    </style>
+
+    <!--深灰字体颜色-->
+    <style name="CommonDarkGreyText">
+        <item name="android:textColor">@color/common_font_gray</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="CommonDarkGreyText.14sp">
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/common_font_size_14sp</item>
+    </style>
+
+    <style name="CommonDarkGreyText.16sp">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/common_font_size_16sp</item>
+    </style>
+
+    <!--白色字体部分-->
+    <style name="CommonWhiteText">
+        <item name="android:textColor">@color/common_color_white</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="CommonWhiteText.14sp">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/common_font_size_14sp</item>
+    </style>
+
+    <style name="CommonWhiteText.12sp">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/common_font_size_12sp</item>
+    </style>
+
+    <style name="CommonWhiteText.17sp">
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">@dimen/common_font_size_17sp</item>
+    </style>
+</resources>

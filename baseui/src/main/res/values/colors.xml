@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="common_color_black">#000000</color>
+    <color name="common_color_white">#FFFFFF</color>
+    <color name="common_color_grey">#E6E6E6</color>
+
+    <!--字体-->
+    <color name="common_font_black">#333333</color>
+    <color name="common_font_gray">#666666</color>
+</resources>
