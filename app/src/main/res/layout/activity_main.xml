@@ -7,12 +7,21 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
+    <com.chezi008.baseui.view.TitleBar
+            android:id="@+id/titleBar"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleLeftGone="true"
+            app:titleCenterText="测试"/>
     <Button
             android:id="@+id/btnTabView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="tabview"
             app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleBar"
             app:layout_constraintRight_toRightOf="parent"/>
 
 </android.support.constraint.ConstraintLayout>
