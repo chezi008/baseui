@@ -25,7 +25,7 @@ open class TitleBar : LinearLayout {
     private var rightImg: Int? = null
     private var bgColor: Int? = null
     private var textColor: Int? = null
-    private var leftGone: Boolean? = false
+    private var leftGone = false
 
     constructor(context: Context) : this(context, null)
 
@@ -57,9 +57,7 @@ open class TitleBar : LinearLayout {
         tv_tb_center.setTextColor(textColor!!)
         tv_tb_right.setTextColor(textColor!!)
 
-        if (leftGone!!) {
-            ll_tb_left.visibility = View.GONE
-        }
+
 
         if (!TextUtils.isEmpty(leftText)) {
             tv_tb_left.text = leftText
@@ -96,6 +94,8 @@ open class TitleBar : LinearLayout {
         ll_tb_right.setOnClickListener {
             mTitleBarClickListener?.rightClick()
         }
+
+        ll_tb_left.visibility = if (leftGone){View.GONE}else{View.VISIBLE}
     }
 
     fun setLeftGone(isGone: Boolean) {
